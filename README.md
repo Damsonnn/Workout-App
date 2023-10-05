@@ -1,4 +1,5 @@
 # Workout-App
 Simple workout web application
-
-Work in progress
+## Entity diagram
+![Diagram not found](https://github.com/Damsonnn/Workout-App/blob/main/image.jpg?raw=true)
+## Work in progress
