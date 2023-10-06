@@ -1,0 +1,33 @@
+services:
+  db:
+    container_name: postgres-wa
+    image: postgres
+    environment:
+      POSTGRES_USER: damcio
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - database:/data/postgres
+    ports:
+      - "5332:5432"
+    networks:
+      - backend
+    restart: unless-stopped
+
+  backend:
+    build: /workout-app/
+    ports: 
+      - "8080:8080"
+    volumes:
+      - ./backend:/app
+    networks:
+      - backend
+    depends_on:
+      - db
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  database:
