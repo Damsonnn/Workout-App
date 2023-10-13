@@ -1,9 +1,4 @@
-services:
-  api:
-    build: /API/workout-app/
-    ports:
-      - "8080:8080"
-      
+services:  
   postgres-db:
     hostname: postgres-db
     ports:
@@ -21,5 +16,3 @@ services:
 
 volumes:
   database:
-
-

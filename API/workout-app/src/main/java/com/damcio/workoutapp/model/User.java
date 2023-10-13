@@ -12,6 +12,7 @@ import java.util.List;
 @EqualsAndHashCode
 @ToString
 @Entity
+@Table(name = "_user")
 public class User {
     @Id
     @SequenceGenerator(

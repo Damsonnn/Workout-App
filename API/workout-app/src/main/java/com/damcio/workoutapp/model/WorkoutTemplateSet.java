@@ -31,6 +31,6 @@ public class WorkoutTemplateSet {
     private WorkoutTemplate workoutTemplate;
 
     @ManyToOne
-    @JoinColumn(name = "workout_template_id", nullable = false)
+    @JoinColumn(name = "exercise_id", nullable = false)
     private Exercise exercise;
 }

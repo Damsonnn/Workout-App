@@ -37,6 +37,6 @@ public class LoggedWorkoutSet {
     private LoggedWorkout loggedWorkout;
 
     @ManyToOne
-    @JoinColumn(name = "logged_workout_id", nullable = false)
+    @JoinColumn(name = "exercise_id", nullable = false)
     private Exercise exercise;
 }
